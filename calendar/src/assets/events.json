@@ -1,0 +1,32 @@
+[
+  {
+    "date": "2025-06-24",
+    "starttime":"10:00AM",
+    "endtime": "11:00AM",
+    "title": "Team Meeting"
+  },
+  {
+    "date": "2025-06-24",
+    "starttime":"10:00AM",
+    "endtime": "11:00AM",
+    "title": "Team Meeting"
+  },
+   {
+    "date": "2025-06-25",
+    "starttime":"10:00AM",
+    "endtime": "11:00AM",
+    "title": "Team Meeting"
+  },
+   {
+    "date": "2025-06-24",
+    "starttime":"10:00AM",
+    "endtime": "11:00AM",
+    "title": "Team Meeting"
+  },
+   {
+    "date": "2025-06-26",
+    "starttime":"10:00AM",
+    "endtime": "11:00AM",
+    "title": "Team Meeting"
+  }
+]
