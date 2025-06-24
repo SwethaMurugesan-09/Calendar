@@ -3,16 +3,16 @@
     "date": "2025-06-24",
     "starttime":"10:00AM",
     "endtime": "11:00AM",
+    "title": "Team Meeting of the college"
+  },
+   {
+    "date": "2025-06-01",
+    "starttime":"10:00AM",
+    "endtime": "11:00AM",
     "title": "Team Meeting"
   },
   {
-    "date": "2025-06-24",
-    "starttime":"10:00AM",
-    "endtime": "11:00AM",
-    "title": "Team Meeting"
-  },
-   {
-    "date": "2025-06-25",
+    "date": "2025-06-12",
     "starttime":"10:00AM",
     "endtime": "11:00AM",
     "title": "Team Meeting"
@@ -24,7 +24,7 @@
     "title": "Team Meeting"
   },
    {
-    "date": "2025-06-26",
+    "date": "2025-06-29",
     "starttime":"10:00AM",
     "endtime": "11:00AM",
     "title": "Team Meeting"
