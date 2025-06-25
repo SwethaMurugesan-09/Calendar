@@ -2,16 +2,17 @@ import React from "react";
 import dayjs from "dayjs";
 
 export default function EventForm({ darkMode, formData, setFormData, setEvents, setShowForm }) {
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    const newEvent = {
-      ...formData,
-      date: dayjs(formData.date).format("YYYY-MM-DD"),
-    };
-    setEvents((prev) => [...prev, newEvent]);
-    setShowForm(false);
-    setFormData({ title: "", date: "", starttime: "", endtime: "" });
+const handleSubmit = (e) => {
+  e.preventDefault();
+  const newEvent = {
+    ...formData,
+    date: dayjs(formData.date).format("YYYY-MM-DD"),
   };
+setUserEvents((prevEvents) => [...prevEvents, newEvent]);
+  setShowForm(false);
+  setFormData({ title: "", date: "", starttime: "", endtime: "" });
+};
+
 
   return (
     <div className={`w-1/3 rounded-lg p-4 h-fit self-start mt-23 ${darkMode ? "bg-gray-800 text-white" : "bg-gray-50 text-black"}`}>

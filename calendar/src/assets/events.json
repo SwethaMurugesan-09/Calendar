@@ -1,15 +1,27 @@
 [
   {
-    "date": "2025-06-24",
+    "date": "2025-7-28",
     "starttime":"10:00AM",
     "endtime": "11:00AM",
-    "title": "Team Meeting of the college"
+    "title": "Team Meeting"
+  },
+  {
+    "date": "2025-06-7",
+    "title": "Bakrid"
+  },
+  {
+    "date": "2025-06-27",
+    "title": "Rath Yatra"
+  },
+  {
+    "date": "2025-7-6",
+    "title": "Muharram"
   },
    {
     "date": "2025-06-01",
     "starttime":"10:00AM",
     "endtime": "11:00AM",
-    "title": "Team Meeting"
+    "title": "Lunch date"
   },
   {
     "date": "2025-06-12",
@@ -18,15 +30,27 @@
     "title": "Team Meeting"
   },
    {
-    "date": "2025-06-24",
+    "date": "2025-06-25",
     "starttime":"10:00AM",
     "endtime": "11:00AM",
-    "title": "Team Meeting"
+    "title": "Meetup with friends"
   },
    {
-    "date": "2025-06-29",
+    "date": "2025-07-11",
     "starttime":"10:00AM",
     "endtime": "11:00AM",
-    "title": "Team Meeting"
+    "title": "Birthday party"
+  },
+  {
+    "date": "2025-05-24",
+    "starttime":"10:00AM",
+    "endtime": "11:00AM",
+    "title": "Friends meetup"
+  },
+  {
+    "date": "2025-05-5",
+    "starttime":"7:00PM",
+    "endtime": "9:00PM",
+    "title": "Dinner Date"
   }
 ]

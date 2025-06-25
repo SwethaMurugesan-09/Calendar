@@ -5,9 +5,14 @@ export const generateDate = (month = dayjs().month(), year = dayjs().year()) => 
   const lastDateOfMonth = dayjs().year(year).month(month).endOf("month");
   const arrayOfDate = [];
 
-  for (let i= 0;i<(firstDateOfMonth.day()+6) %7;i++) {
-    arrayOfDate.push({ currentMonth: false, date: firstDateOfMonth.subtract((firstDateOfMonth.day() + 6) % 7 - i, "day") });
-  }
+ const startDay = firstDateOfMonth.day();
+for (let i = 0; i < startDay; i++) {
+  arrayOfDate.push({
+    currentMonth: false,
+    date: firstDateOfMonth.subtract(startDay - i, "day")
+  });
+}
+
   for (let i=1;i<=lastDateOfMonth.date();i++) {
     const date = dayjs().year(year).month(month).date(i);
     arrayOfDate.push({

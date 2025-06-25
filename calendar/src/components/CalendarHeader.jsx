@@ -1,13 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import { GrFormNext, GrFormPrevious } from "react-icons/gr";
 import { Listbox } from "@headlessui/react";
 import { months } from "./CalendarUtils";
 
 const viewModes = [
   { value: "month", label: "Month" },
-  { value: "week", label: "Week" },
   { value: "year", label: "Year" },
 ];
+
 
 export default function CalendarHeader({
   today,
@@ -31,28 +31,25 @@ export default function CalendarHeader({
           {viewMode === "week" &&
             `Week of ${today.startOf("week").format("MMM D")} - ${today.endOf("week").format("MMM D, YYYY")}`}
         </h2>
-
-        <button
-          onClick={() => setToday( viewMode === "year" ? today.subtract(1, "year") : today.subtract(1, "month"))}
-          className="px-2 py-1 rounded hover:bg-gray-100">
-          <GrFormPrevious />
-        </button>
-
         <button
           onClick={() => setToday(currentDate)}
           className={`px-4 py-1 rounded border text-white cursor-pointer transition
             ${darkMode ? "border-purple-600 bg-purple-800 text-white hover:bg-gray-700" : "border-purple-600 bg-purple-600 hover:bg-purple-800"}`} >
           Today
         </button>
-
-
+        <div className="flex gap-0">
+        <button
+            onClick={() => setToday( viewMode === "year" ? today.subtract(1, "year") : today.subtract(1, "month"))}
+           className="px-3 py-1 cursor-pointer text-2xl rounded hover:bg-gray-100">
+           <GrFormPrevious />
+        </button>
         <button onClick={() =>setToday(viewMode === "year"? today.add(1, "year")
                 : today.add(1, "month"))}
-          className="px-2 py-1 rounded hover:bg-gray-100">
+          className="px-2 py-1 cursor-pointer text-2xl rounded hover:bg-gray-100">
           <GrFormNext />
         </button>
       </div>
-
+          </div>
       <div className="flex items-center gap-3">
       <Listbox value={selectedMode} onChange={(mode) => setViewMode(mode.value)}>
   <div className="relative">
@@ -70,14 +67,18 @@ export default function CalendarHeader({
     </Listbox.Options>
   </div>
 </Listbox>
-        <button onClick={() => setDarkMode(!darkMode)} className={`px-3 py-2 text-sm rounded cursor-pointer ${
-            darkMode ? "bg-yellow-400 text-black" : "bg-gray-700 text-white" }`}>
-          {darkMode ? "☀️ Light" : "🌙 Dark"}
-        </button>
+        <button
+            onClick={() => setDarkMode(prev => !prev)}
+            className={`px-3 py-2 text-sm rounded cursor-pointer ${
+              darkMode ? "bg-yellow-400 text-black" : "bg-gray-700 text-white"
+            }`}
+          >
+            {darkMode ? "☀️ Light" : "🌙 Dark"}
+          </button>
 
         <button onClick={() => setShowForm(!showForm)}
           className="bg-purple-600 text-white px-4 py-2 rounded hover:bg-purple-900 text-sm cursor-pointer">
-          {showForm ? "Close" : "Add Event"}
+          {showForm ? "Close event" : "Add Event"}
         </button>
       </div>
     </div>
